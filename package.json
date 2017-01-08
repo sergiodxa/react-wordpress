@@ -1,0 +1,28 @@
+{
+  "name": "react-wordpress",
+  "version": "1.0.0",
+  "description": "Example of a React+Next.js+WordPress application.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergiodxa/react-wordpress.git"
+  },
+  "keywords": [],
+  "author": "Sergio Daniel Xalambrí <sergio@xalambri.xyz> (https://sergio.xalambri.xyz/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sergiodxa/react-wordpress/issues"
+  },
+  "homepage": "https://github.com/sergiodxa/react-wordpress#readme",
+  "dependencies": {
+    "isomorphic-fetch": "2.2.1",
+    "next": "2.0.0-beta.16",
+    "wpcom": "5.3.0"
+  }
+}
