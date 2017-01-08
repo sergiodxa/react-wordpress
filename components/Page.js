@@ -1,5 +1,15 @@
 import React, { Children } from 'react';
 import Head from 'next/head';
+import NProgress from 'nprogress';
+import Router from 'next/router';
+
+
+Router.onRouteChangeStart = (url) => {
+  console.log(`Loading: ${url}`);
+  NProgress.start();
+};
+Router.onRouteChangeComplete = () => NProgress.done();
+Router.onRouteChangeError = () => NProgress.done();
 
 
 function Page(props) {
@@ -13,6 +23,11 @@ function Page(props) {
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="/static/nprogress.css"
         />
       </Head>
 
