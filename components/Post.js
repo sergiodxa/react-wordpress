@@ -16,7 +16,10 @@ function Post(props) {
       />
       {props.full || (
         <div className="panel-footer">
-          <Link href={`/post?id=${props.ID}`}>
+          <Link
+            as={`/p/${props.ID}/${props.slug}`}
+            href={`/post?id=${props.ID}`}
+          >
             Leer más
           </Link>
         </div>

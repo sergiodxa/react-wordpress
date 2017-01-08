@@ -4,9 +4,9 @@
   "description": "Example of a React+Next.js+WordPress application.",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
     "build": "next build",
-    "start": "next start",
+    "start": "node server.js",
+    "now-start": "NODE_ENV=production node server.js",
     "test": "jest"
   },
   "repository": {
@@ -21,7 +21,10 @@
   },
   "homepage": "https://github.com/sergiodxa/react-wordpress#readme",
   "dependencies": {
+    "express": "4.14.0",
     "isomorphic-fetch": "2.2.1",
-    "next": "2.0.0-beta.16"
+    "lru-cache": "4.0.2",
+    "next": "2.0.0-beta.16",
+    "nprogress": "0.2.0"
   }
 }
