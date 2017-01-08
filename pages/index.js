@@ -29,9 +29,17 @@ class HomePage extends Component {
           <li className="active">Home</li>
         </ol>
 
-        {this.props.posts.map(post => (
-          <Post {...post} key={post.ID} />
-        ))}
+        {
+          this.props.posts.sort((first, second) => {
+            const firstDate = new Date(first.date);
+            const secondDate = new Date(second.date);
+            if (firstDate < secondDate) return -1;
+            if (firstDate > secondDate) return 1;
+            return 0;
+          }).reverse().map(post => (
+            <Post {...post} key={post.ID} />
+          ))
+        }
       </Page>
     );
   }
